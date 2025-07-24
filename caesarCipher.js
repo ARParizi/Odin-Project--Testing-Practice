@@ -14,6 +14,6 @@ function isLowerCase(char) {
 function cipherChar(char, shift) {
     const charCode    = char.charCodeAt(0);
     const baseCode    = isLowerCase(char) ? 97 : 65;
-    const newCharCode = baseCode + (charCode - baseCode + shift) % 26 ;
+    const newCharCode = baseCode + (charCode - baseCode + shift + 26) % 26 ;
     return String.fromCharCode(newCharCode);
 }
