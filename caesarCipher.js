@@ -1,14 +1,14 @@
 export function caesarCipher(str, shift) {
     return str.split('').map((char) =>
-         isLetter(char) ? cipherChar(char, shift) : char).join('');
+        isLetter(char) ? cipherChar(char, shift) : char).join('');
 }
 
 function isLetter(char) {
-  return /^[a-zA-Z]$/.test(char);
+    return /^[a-zA-Z]$/.test(char);
 }
 
 function isLowerCase(char) {
-  return /^[a-z]$/.test(char);
+    return /^[a-z]$/.test(char);
 }
 
 function cipherChar(char, shift) {
