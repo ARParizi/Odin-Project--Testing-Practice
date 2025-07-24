@@ -16,3 +16,8 @@ test('Cipher HeLLo, shift by 3', () => {
 test('Cipher Hello, World!, shift by 3', () => {
     expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
 });
+
+test('supports negative shifts', () => {
+    expect(caesarCipher('def', -3)).toBe('abc');
+    expect(caesarCipher('AbC', -2)).toBe('YzA');
+});
