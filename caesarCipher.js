@@ -1,4 +1,5 @@
 export function caesarCipher(str, shift) {
+    shift = shift % 26;
     return str.split('').map((char) =>
         isLetter(char) ? cipherChar(char, shift) : char).join('');
 }
@@ -12,7 +13,6 @@ function isLowerCase(char) {
 }
 
 function cipherChar(char, shift) {
-    shift = shift % 26;
     const charCode    = char.charCodeAt(0);
     const baseCode    = isLowerCase(char) ? 97 : 65;
     const newCharCode = baseCode + (charCode - baseCode + shift + 26) % 26 ;
