@@ -12,3 +12,7 @@ test('Capitalize Abcd', () => {
 test('Capitalize AbCd', () => {
     expect(capitalize('AbCd')).toBe('AbCd');
 });
+
+test('Capitalize a b  Cd', () => {
+    expect(capitalize('a b  Cd')).toBe('A b  Cd');
+});
