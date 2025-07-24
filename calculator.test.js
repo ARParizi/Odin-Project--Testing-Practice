@@ -1,4 +1,4 @@
-import { calculator } from './reverse.js';
+import { calculator } from './calculator.js';
 
 
 test('Calculate 1 + 2', () => {
