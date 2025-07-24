@@ -4,11 +4,11 @@ export function caesarCipher(str, shift) {
 }
 
 function isLetter(char) {
-    return /^[a-zA-Z]$/.test(char);
+    return char >= 'A' && char <= 'Z' || char >= 'a' && char <= 'z';
 }
 
 function isLowerCase(char) {
-    return /^[a-z]$/.test(char);
+    return char >= 'a' && char <= 'z';
 }
 
 function cipherChar(char, shift) {
